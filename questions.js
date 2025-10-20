@@ -25,7 +25,7 @@ const questionSets = {
     { question:"Who has scored the first century in IPL History?", options: ["Virat Kohli","David Warner","Rohit Sharma","Brendon McCullum"], answer: "Brendon McCullum" },
     {question:"Which bowler finished as the leading wicket-taker in the 2020 IPL season?",options:["Kagiso Rabada","Jasprit Bumrah","Yuzvendra Chahal","Bhuvneshwar Kumar"],answer:"Kagiso Rabada"},
     { question:"Which team has recorded the highest successful run chase in IPL history?",options:["Mumbai indians","Sunrisers Hyderabad","Gujrat Titans","Punjab Kings"],answer:"Punjab Kings"},
-    { question:""}
+    { question:"How many games does each team play during the IPL league stage?",options:["12","14","16","10"],answer:"14"},
   ],
   hard: [
     { question: "Who was the first uncapped player to win an IPL MVP?", options: ["Axar Patel", "Varun Chakravarthy", "Paul Valthaty", "Harshal Patel"], answer: "Paul Valthaty" },
