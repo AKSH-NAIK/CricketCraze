@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CricketCraze</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cricket-field">
+    <div class="container">
+      <!-- Start Screen -->
+      <div id="start-screen" class="screen">
+        <div class="header">
+          <div class="logo">
+          
+            <h1>CricketCraze</h1>
+          </div>
+          <p class="subtitle">Every Question Is a Yorker—Can You Handle It?</p>
+        </div>
+        
+        <div class="difficulty-section">
+          <h2>Choose Your Difficulty</h2>
+          <div class="difficulty-buttons">
+            <button class="difficulty-btn easy" onclick="startQuiz('easy')">
+              <span class="btn-icon">🏏</span>
+              <span class="btn-text">Easy</span>
+              <span class="btn-desc">Beginner Level</span>
+            </button>
+            <button class="difficulty-btn medium" onclick="startQuiz('medium')">
+              <span class="btn-icon">🏆</span>
+              <span class="btn-text">Medium</span>
+              <span class="btn-desc">Intermediate Level</span>
+            </button>
+            <button class="difficulty-btn hard" onclick="startQuiz('hard')">
+              <span class="btn-icon">🔥</span>
+              <span class="btn-text">Hard</span>
+              <span class="btn-desc">Expert Level</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-box" class="screen hidden">
+        <div class="quiz-header">
+          <div class="quiz-info">
+            <div class="info-item">
+              <span class="info-label">Question</span>
+              <span id="question-number" class="info-value">1/10</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Time</span>
+              <span id="timer" class="info-value timer">10s</span>
+            </div>
+          </div>
+          <button id="quit-btn" onclick="quitQuiz()" class="quit-btn">
+            <span class="quit-icon">✕</span>
+            <span class="quit-text">Quit</span>
+          </button>
+        </div>
+
+        <div class="question-container">
+          <p id="question" class="question-text"></p>
+          <div id="options" class="options-container"></div>
+        </div>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-box" class="screen hidden">
+        <div class="result-content">
+          <div class="result-header">
+            <h2>Quiz Complete!</h2>
+            <div class="score-display">
+              <span class="score-label">Your Score</span>
+              <span class="score-value" id="final-score">0/10</span>
+            </div>
+          </div>
+          <div class="result-actions">
+            <button class="action-btn retry" onclick="startQuizAgain()">
+              <span class="btn-icon">🔄</span>
+              <span class="btn-text">Try Again</span>
+            </button>
+            <button class="action-btn home" onclick="goToHome()">
+              <span class="btn-icon">🏠</span>
+              <span class="btn-text">Home</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+const questionSets = {
+  easy: [
+    { question: "What does IPL stand for?", options: ["Indian Premier League", "International Premier League", "Indian Professional League", "International Professional League"], answer: "Indian Premier League" },
+    { question: "Which team won IPL 2025?", options: ["MI", "CSK", "RCB", "RR"], answer: "RCB" },
+    { question: "Who is the highest wicket-taker in IPL history?", options: ["Dwayne Bravo", "Lasith Malinga", "Yuzvendra Chahal", "Sunil Narine"], answer: "Yuzvendra Chahal" },
+    { question: "Which player has scored the most runs in a single IPL season?", options: ["Chris Gayle", "Virat Kohli", "David Warner", "Rohit Sharma"], answer: "Virat Kohli" },
+    { question: "What is the maximum number of overs in an IPL match?", options: ["20", "25", "30", "40"], answer: "40" },
+    { question: "Which team has won the most IPL titles?", options: ["MI", "SRH", "KKR", "RCB"], answer: "MI" },
+    { question: "What's the maximum number of foreign players allowed in an IPL team?", options: ["Unlimited", "3", "4", "5"], answer: "4" },
+    { question: "Which team is known as the 'Orange Army'?", options: ["MI", "SRH", "KKR", "RCB"], answer: "SRH" },
+    { question: "Which team won the inaugural IPL season in 2008?", options: ["RR", "CSK", "RCB", "DC"], answer: "RR" },
+    { question: "Which player has hit the most sixes in IPL history?", options: ["Chris Gayle", "MS Dhoni", "Rohit Sharma", "AB de Villiers"], answer: "Chris Gayle" },
+    { question: "What is the official color of the Kolkata Knight Riders?", options: ["Purple and Gold", "Blue and Yellow", "Red and Black", "Green and White"], answer: "Purple and Gold" },
+    {question :" Which Team has scored the most run in one inning ?",options:["RCB","CSK","KKR","SRH"],answer:"SRH"},
+    {question :"Which Award is given to the highest run scorer of the season?", options:["Golden Bat","Purple Cap","Green Cap","Orange Cap"], answer: "Orange Cap"},
+    {question:"Which team has scored the lowest total in IPL history?",options:["Sunrisers Hyderabad","Kolkata Knight Riders","Royal Challengers Bengaluru","Gujrat Titans"],answer:"Royal Challengers Bengaluru"}
+  ],
+  medium: [
+    { question: "Who scored the most runs in IPL 2022?", options: ["KL Rahul", "Ruturaj Gaikwad", "Jos Buttler", "David Warner"], answer: "Jos Buttler" },
+    { question: "Which team finished last in IPL 2021?", options: ["SRH", "DC", "RCB", "KKR"], answer: "SRH" },
+    { question: "Who won the IPL Orange Cap in 2020?", options: ["K.L. Rahul", "David Warner", "Virat Kohli", "Ruturaj Gaikwad"], answer: "K.L. Rahul" },
+    { question: "Which bowler took the most wickets in IPL 2021?", options: ["Dwayne Bravo", "Harshal Patel", "Jasprit Bumrah", "Ravichandran Ashwin"], answer: "Harshal Patel" },
+    { question: "Who was the captain of the Chennai Super Kings in IPL 2020?", options: ["MS Dhoni", "Ravindra Jadeja", "Faf du Plessis", "Dwayne Bravo"], answer: "MS Dhoni" },
+    { question:" WHich team playes their home matches at wankhede stadium?", options: ["MI", "CSK", "RCB", "KKR"], answer: "MI" },
+    { question:"Who has scored the first century in IPL History?", options: ["Virat Kohli","David Warner","Rohit Sharma","Brendon McCullum"], answer: "Brendon McCullum" },
+    {question:"Which bowler finished as the leading wicket-taker in the 2020 IPL season?",options:["Kagiso Rabada","Jasprit Bumrah","Yuzvendra Chahal","Bhuvneshwar Kumar"],answer:"Kagiso Rabada"},
+    { question:"Which team has recorded the highest successful run chase in IPL history?",options:["Mumbai indians","Sunrisers Hyderabad","Gujrat Titans","Punjab Kings"],answer:"Punjab Kings"},
+    { question:""}
+  ],
+  hard: [
+    { question: "Who was the first uncapped player to win an IPL MVP?", options: ["Axar Patel", "Varun Chakravarthy", "Paul Valthaty", "Harshal Patel"], answer: "Paul Valthaty" },
+    { question: "Which player has the highest strike rate in a single IPL season?", options: ["Chris Gayle", "AB de Villiers", "Andre Russell", "MS Dhoni"], answer: "Chris Gayle" },
+    { question: "Who is the only player to have taken a hat-trick in the IPL final?", options: ["Ravichandran Ashwin", "Jaydev Unadkat", "Kagiso Rabada", "Brett Lee"], answer: "Jaydev Unadkat" },
+    { question: "Which team has the highest win percentage in IPL history?", options: ["MI", "CSK", "RCB", "KKR"], answer: "MI" },
+    { question: "Who was the first player to score 1000 runs in IPL?", options: ["Brendon McCullum", "Chris Gayle", "Rohit Sharma", "David Warner"], answer: "Brendon McCullum" },
+    { question: "Which player took the first-ever IPL hat-trick?", options: ["Yuvraj Singh", "Shane Bond", "Brett Lee", "Lakshmipathy Balaji"], answer: "Lakshmipathy Balaji" },
+    {question:"Who holds the record of best bowling figure in IPL History?", options:["Harbhajan Singh","Lasith Malinga","Alzarri Joseph","Yuzvendra Chahal"], answer:"Alzarri Joseph"},
+    { question:"Who has won MVP in consecutice seasons?",options:["Virat Kohli","Rohit Sharma","None","David Warner"], answer:"None"},
+    {question:"Who has won the most MVP awards in IPL history?",options:["Virat Kohli","Rohit Sharma","Sunil Narine","David Warner"], answer:"Sunil Narine"},
+    { question:"Which team holds the record for longest winning streak in IPL history?",options:["Kolkata Knight Riders","Mumbai Indians","Chennai Super Kings","Royal Challengers Banglore"],answer:"Kolkata Knight Riders"},
+    { question:"Who was the Captain of the Deccan Chargers when they won IPL 2009?",options:["Rohit Sharma","Kumar Sangkara","Adam Gilchrist","Andrew Symonds" ],answer:"Adam Gilchrist"},
+    { question:"Who was the first player to score a century in an IPL final?",options:["Shane Watson","Wriddhiman Saha","Ben Stokes","Virat Kohli"], answer:"Wriddhiman Saha"},
+    { question:"Who has claimed the most hat-tricks in IPL history?",options:["Yuzvendra Chahal", "Amit Mishra","Lasith Malinga","Kagiso Rabada"],answer:"Amit Mishra"}
+  ]
+};
