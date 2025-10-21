@@ -6,7 +6,7 @@ Test your cricket knowledge and see how many questions you can answer correctly!
 ---
 
 ## 🌐 Live Demo
-Play the game here 👉 **[CricketCraze on GitHub Pages](https://aksh-naik.github.io/CricketCraze/)**
+Play the game here 👉 **[Play CricketCraze ](https://aksh-naik.github.io/CricketCraze/)**
 
 ---
 
@@ -45,7 +45,7 @@ CricketCraze/
 ---
 
 ## 🚀 How to Play
-1. Open the live demo: [https://aksh-naik.github.io/CricketCraze/](https://aksh-naik.github.io/CricketCraze/)
+1. Open the live demo: [Play CricketCraze](https://aksh-naik.github.io/CricketCraze/)
 2. Click **Start** to begin the quiz.
 3. Choose your answer for each question.
 4. See your score at the end — then try again to beat your high score!
@@ -54,7 +54,7 @@ CricketCraze/
 
 ## 🧑‍💻 Author
 **Aksh Naik**  
-🔗 [GitHub Profile](https://github.com/AKSH-NAIK)
+🔗 [GitHub ](https://github.com/AKSH-NAIK)
 
 ---
 
