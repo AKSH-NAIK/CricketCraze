@@ -31,18 +31,7 @@ Your score increases as you answer correctly — can you get them all right?
 - **CSS3** — Styling and layout  
 - **JavaScript (ES6)** — Game logic and interactivity
 
----
 
-## 📁 Project Structure
-CricketCraze/
-│
-├── index.html # Main HTML file
-├── style.css # Game styling
-├── script.js # Game logic
-└── questions.js # Quiz questions data
-
-
----
 
 ## 🚀 How to Play
 1. Open the live demo: [Play CricketCraze](https://aksh-naik.github.io/CricketCraze/)
