@@ -26,6 +26,7 @@ const questionSets = {
     {question:"Which bowler finished as the leading wicket-taker in the 2020 IPL season?",options:["Kagiso Rabada","Jasprit Bumrah","Yuzvendra Chahal","Bhuvneshwar Kumar"],answer:"Kagiso Rabada"},
     { question:"Which team has recorded the highest successful run chase in IPL history?",options:["Mumbai indians","Sunrisers Hyderabad","Gujrat Titans","Punjab Kings"],answer:"Punjab Kings"},
     { question:"How many games does each team play during the IPL league stage?",options:["12","14","16","10"],answer:"14"},
+    { question:"Who was the first player to score a century in IPL history?",options:["Brendon McCullum","Chris Gayle","Virat Kohli","AB de Villiers"], answer:"Brendon McCullum"},
   ],
   hard: [
     { question: "Who was the first uncapped player to win an IPL MVP?", options: ["Axar Patel", "Varun Chakravarthy", "Paul Valthaty", "Harshal Patel"], answer: "Paul Valthaty" },
@@ -40,6 +41,7 @@ const questionSets = {
     { question:"Which team holds the record for longest winning streak in IPL history?",options:["Kolkata Knight Riders","Mumbai Indians","Chennai Super Kings","Royal Challengers Banglore"],answer:"Kolkata Knight Riders"},
     { question:"Who was the Captain of the Deccan Chargers when they won IPL 2009?",options:["Rohit Sharma","Kumar Sangkara","Adam Gilchrist","Andrew Symonds" ],answer:"Adam Gilchrist"},
     { question:"Who was the first player to score a century in an IPL final?",options:["Shane Watson","Wriddhiman Saha","Ben Stokes","Virat Kohli"], answer:"Wriddhiman Saha"},
-    { question:"Who has claimed the most hat-tricks in IPL history?",options:["Yuzvendra Chahal", "Amit Mishra","Lasith Malinga","Kagiso Rabada"],answer:"Amit Mishra"}
+    { question:"Who has claimed the most hat-tricks in IPL history?",options:["Yuzvendra Chahal", "Amit Mishra","Lasith Malinga","Kagiso Rabada"],answer:"Amit Mishra"},
+    { question:"Which bowler has bowled the most dot balls in IPL history?",options:["Bhuvneshwar Kumar","Jasprit Bumrah","Sunil Narine","Lasith Malinga"], answer:"Bhuvneshwar Kumar"}
   ]
 };
