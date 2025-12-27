@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,14 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <!-- Theme Toggle - Top Right -->
+  <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()">
+    <span class="toggle-icon">🌙</span><span class="toggle-text">Dark</span>
+  </button>
+
   <div class="cricket-field">
     <div class="container">
       <!-- Auth Landing (visible first) -->
@@ -37,7 +44,8 @@
           </form>
 
           <div class="divider">or</div>
-          <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-callback="handleGoogleCredentialResponse"></div>
+          <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-callback="handleGoogleCredentialResponse">
+          </div>
           <div id="google-button"></div>
 
           <p class="auth-note">This demo stores a mock session in your browser. We'll connect to a backend later.</p>
@@ -57,12 +65,12 @@
         </div>
         <div class="header">
           <div class="logo">
-          
+
             <h1>CricketCraze</h1>
           </div>
           <p class="subtitle">Every Question Is a Yorker—Can You Handle It?</p>
         </div>
-        
+
         <div class="difficulty-section">
           <h2>Choose Your Difficulty</h2>
           <div class="difficulty-buttons">
@@ -98,7 +106,8 @@
               <span id="timer" class="info-value timer">10s</span>
             </div>
           </div>
-          <button id="sound-btn" onclick="toggleSound()" class="quit-btn" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">
+          <button id="sound-btn" onclick="toggleSound()" class="quit-btn"
+            style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">
             <span class="quit-icon">🔊</span>
             <span class="quit-text">Sound: On</span>
           </button>
@@ -139,6 +148,8 @@
     </div>
   </div>
 
+  <script src="auth.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
