@@ -29,7 +29,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
@@ -42,7 +42,7 @@ body {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border-radius: 24px;
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.1),
     0 8px 16px rgba(0, 0, 0, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -58,6 +58,7 @@ body {
     opacity: 0;
     transform: translateY(30px) scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -268,8 +269,15 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .quit-btn {
@@ -469,34 +477,34 @@ body {
     margin: 10px;
     border-radius: 16px;
   }
-  
+
   .screen {
     padding: 24px;
   }
-  
+
   .logo h1 {
     font-size: 2rem;
   }
-  
+
   .logo-image {
     width: 50px;
     height: 50px;
   }
-  
+
   .quiz-header {
     flex-direction: column;
     gap: 16px;
   }
-  
+
   .quiz-info {
     gap: 16px;
   }
-  
+
   .result-actions {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .action-btn {
     width: 100%;
     justify-content: center;
@@ -507,11 +515,11 @@ body {
   .difficulty-btn {
     padding: 16px 20px;
   }
-  
+
   .btn-text {
     font-size: 1.1rem;
   }
-  
+
   .question-text {
     font-size: 1.1rem;
   }
@@ -524,18 +532,21 @@ body {
   padding: 20px;
   text-align: center;
 }
+
 .auth-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 12px;
 }
+
 .auth-form input {
   padding: 12px 14px;
   border-radius: 10px;
   border: 1px solid #e2e8f0;
   font-size: 1rem;
 }
+
 .primary-btn {
   padding: 12px 16px;
   border: none;
@@ -545,13 +556,243 @@ body {
   font-weight: 700;
   cursor: pointer;
 }
-.auth-tabs { display:flex; gap:8px; justify-content:center; margin-top:8px; }
-.auth-tab { padding:8px 12px; border-radius:10px; border:1px solid #e2e8f0; cursor:pointer; font-weight:600; background:#fff; }
-.auth-tab.active { background: linear-gradient(135deg,#4a7c59 0%,#2d5a3d 100%); color:#fff; }
-.divider { margin:12px 0; color:#64748b }
-.auth-note { font-size:0.9rem; color:#64748b; margin-top:8px }
 
-.site-header { display:flex; justify-content:space-between; align-items:center; padding:16px 0; }
-.account-area { display:flex; gap:12px; align-items:center; }
-.account-area span { font-weight:700; color:#1e293b }
-.account-area .action-btn { padding:8px 12px; font-size:0.9rem }
+.auth-tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.auth-tab {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  font-weight: 600;
+  background: #fff;
+}
+
+.auth-tab.active {
+  background: linear-gradient(135deg, #4a7c59 0%, #2d5a3d 100%);
+  color: #fff;
+}
+
+.divider {
+  margin: 12px 0;
+  color: #64748b
+}
+
+.auth-note {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 8px
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.account-area {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.account-area span {
+  font-weight: 700;
+  color: #1e293b
+}
+
+.account-area .action-btn {
+  padding: 8px 12px;
+  font-size: 0.9rem
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.3);
+  z-index: 100;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 41, 59, 0.4);
+}
+
+.toggle-icon {
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   DARK MODE STYLES
+   Mature color palette with green accents
+   ============================================ */
+body.dark-mode {
+  background: linear-gradient(135deg, #0f1a14 0%, #1a2e23 25%, #243b2e 50%, #2d4a39 75%, #365944 100%);
+}
+
+body.dark-mode .container {
+  background: rgba(22, 33, 27, 0.95);
+  border: 1px solid rgba(74, 124, 89, 0.3);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .logo h1 {
+  background: linear-gradient(135deg, #6b9c7a 0%, #8bbd9b 50%, #a8d4b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark-mode .subtitle {
+  color: #94a3b8;
+}
+
+body.dark-mode .difficulty-section h2 {
+  color: #e2e8f0;
+}
+
+/* Dark mode difficulty buttons - keep vibrant colors */
+body.dark-mode .difficulty-btn.easy {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.25);
+}
+
+body.dark-mode .difficulty-btn.medium {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.25);
+}
+
+body.dark-mode .difficulty-btn.hard {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.25);
+}
+
+/* Quiz header dark mode */
+body.dark-mode .quiz-header {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border: 1px solid rgba(74, 124, 89, 0.3);
+}
+
+body.dark-mode .info-label {
+  color: #94a3b8;
+}
+
+body.dark-mode .info-value {
+  color: #f1f5f9;
+}
+
+/* Question styling dark mode */
+body.dark-mode .question-text {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #f1f5f9;
+  border-left: 4px solid #6b9c7a;
+}
+
+/* Options dark mode */
+body.dark-mode .option-btn {
+  background: linear-gradient(135deg, #1e293b 0%, #2d3748 100%);
+  border: 2px solid #475569;
+  color: #e2e8f0;
+}
+
+body.dark-mode .option-btn:hover {
+  border-color: #6b9c7a;
+  box-shadow: 0 4px 12px rgba(74, 124, 89, 0.25);
+}
+
+body.dark-mode .option-btn::before {
+  background: #6b9c7a;
+}
+
+body.dark-mode .option-btn.correct {
+  background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+  border-color: #22c55e;
+  color: #86efac;
+}
+
+body.dark-mode .option-btn.incorrect {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+  border-color: #ef4444;
+  color: #fca5a5;
+}
+
+/* Result screen dark mode */
+body.dark-mode .result-header h2 {
+  color: #f1f5f9;
+}
+
+body.dark-mode .score-label {
+  color: #94a3b8;
+}
+
+body.dark-mode .score-value {
+  background: linear-gradient(135deg, #6b9c7a 0%, #8bbd9b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Auth elements dark mode */
+body.dark-mode .auth-form input {
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #f1f5f9;
+}
+
+body.dark-mode .auth-form input::placeholder {
+  color: #64748b;
+}
+
+body.dark-mode .auth-tab {
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #e2e8f0;
+}
+
+body.dark-mode .auth-tab.active {
+  background: linear-gradient(135deg, #4a7c59 0%, #2d5a3d 100%);
+  color: white;
+}
+
+body.dark-mode .divider {
+  color: #64748b;
+}
+
+body.dark-mode .auth-note {
+  color: #64748b;
+}
+
+body.dark-mode .account-area span {
+  color: #f1f5f9;
+}
+
+/* Theme toggle in dark mode */
+body.dark-mode .theme-toggle-btn {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #1e293b;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
