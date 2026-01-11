@@ -92,11 +92,19 @@ function switchAuthTab(tab) {
 }
 
 /* ---- Form Handlers ---- */
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 function onLoginSubmit(e) {
     e.preventDefault();
     const email = document.getElementById('login-email').value.trim();
     const password = document.getElementById('login-password').value;
+
     if (!email || !password) { alert('Enter email and password'); return; }
+    if (!isValidEmail(email)) { alert('Please enter a valid email address'); return; }
+
     // Mock login: accept anything and create session
     const user = { email, name: email.split('@')[0] };
     setSession(user);
@@ -109,8 +117,11 @@ function onSignupSubmit(e) {
     const email = document.getElementById('signup-email').value.trim();
     const password = document.getElementById('signup-password').value;
     const confirm = document.getElementById('signup-password-confirm').value;
+
     if (!name || !email || !password) { alert('Fill all fields'); return; }
+    if (!isValidEmail(email)) { alert('Please enter a valid email address'); return; }
     if (password !== confirm) { alert('Passwords do not match'); return; }
+
     // Mock signup: create session
     const user = { name, email };
     setSession(user);
