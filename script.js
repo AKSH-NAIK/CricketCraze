@@ -260,3 +260,9 @@ function shuffle(array) {
   return array;
 }
 
+// Make functions globally accessible for onclick handlers
+window.startQuiz = startQuiz;
+window.toggleSound = toggleSound;
+window.goToHome = goToHome;
+window.quitQuiz = quitQuiz;
+window.startQuizAgain = startQuizAgain;
