@@ -1,3 +1,5 @@
+import { auth } from "./firebase.js";
+
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -266,3 +268,24 @@ window.toggleSound = toggleSound;
 window.goToHome = goToHome;
 window.quitQuiz = quitQuiz;
 window.startQuizAgain = startQuizAgain;
+
+/* DEBUG: Check auth state */
+window.firebaseAuthCheck = () => {
+  if (auth.currentUser) {
+    console.log("LOGGED IN UID:", auth.currentUser.uid);
+  } else {
+    console.log("NO USER LOGGED IN");
+  }
+};
+
+/* DEBUG: Get Firebase ID token */
+window.getFirebaseIdToken = async () => {
+  if (!auth.currentUser) {
+    console.log("Not logged in");
+    return;
+  }
+
+  const token = await auth.currentUser.getIdToken();
+  console.log("FIREBASE ID TOKEN:");
+  console.log(token);
+};
