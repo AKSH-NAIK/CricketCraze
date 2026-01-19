@@ -12,5 +12,9 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
+
 /* Export shared auth instance */
 export const auth = getAuth(app);
+
+/* Make auth available in browser console for testing */
+window.auth = auth;

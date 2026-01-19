@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="cricketGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a472a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d5a3d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a7c59;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ballGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="batGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b8860b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b6914;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#cricketGradient)" filter="url(#shadow)"/>
+  
+  <!-- Inner Circle -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#6b9c7a" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Cricket Bat -->
+  <g transform="translate(60, 50) rotate(-25, 40, 50)">
+    <!-- Bat Handle -->
+    <rect x="35" y="10" width="10" height="40" rx="5" fill="#8b4513"/>
+    <rect x="36" y="12" width="8" height="36" rx="4" fill="#a0522d"/>
+    
+    <!-- Bat Blade -->
+    <ellipse cx="40" cy="70" rx="18" ry="45" fill="url(#batGradient)"/>
+    <ellipse cx="40" cy="70" rx="14" ry="41" fill="#f4e4c1"/>
+    
+    <!-- Bat Details -->
+    <line x1="40" y1="35" x2="40" y2="105" stroke="#d4af37" stroke-width="1.5" opacity="0.6"/>
+    <line x1="35" y1="40" x2="35" y2="100" stroke="#d4af37" stroke-width="0.5" opacity="0.4"/>
+    <line x1="45" y1="40" x2="45" y2="100" stroke="#d4af37" stroke-width="0.5" opacity="0.4"/>
+  </g>
+  
+  <!-- Cricket Ball -->
+  <g transform="translate(120, 90)">
+    <circle cx="0" cy="0" r="22" fill="url(#ballGradient)" filter="url(#shadow)"/>
+    <circle cx="-4" cy="-4" r="22" fill="url(#ballGradient)"/>
+    
+    <!-- Ball Seam -->
+    <path d="M -15,-8 Q -8,-12 0,-12 Q 8,-12 15,-8" 
+          fill="none" stroke="#fca5a5" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -15,8 Q -8,12 0,12 Q 8,12 15,8" 
+          fill="none" stroke="#fca5a5" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Ball Shine -->
+    <circle cx="-8" cy="-8" r="5" fill="white" opacity="0.4"/>
+  </g>
+  
+  <!-- Stumps -->
+  <g transform="translate(85, 130)">
+    <!-- Three Stumps -->
+    <rect x="0" y="0" width="4" height="35" rx="2" fill="#f4e4c1" stroke="#d4af37" stroke-width="0.5"/>
+    <rect x="8" y="0" width="4" height="35" rx="2" fill="#f4e4c1" stroke="#d4af37" stroke-width="0.5"/>
+    <rect x="16" y="0" width="4" height="35" rx="2" fill="#f4e4c1" stroke="#d4af37" stroke-width="0.5"/>
+    
+    <!-- Bails -->
+    <rect x="-1" y="-2" width="7" height="2" rx="1" fill="#d4af37"/>
+    <rect x="11" y="-2" width="7" height="2" rx="1" fill="#d4af37"/>
+  </g>
+  
+  <!-- Decorative Stars/Sparkles -->
+  <circle cx="30" cy="40" r="2" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="170" cy="50" r="2.5" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="160" cy="150" r="2" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="40" cy="160" r="2.5" fill="#fbbf24" opacity="0.8"/>
+  
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#8bbd9b" stroke-width="3" opacity="0.6"/>
+</svg>
