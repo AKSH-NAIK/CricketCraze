@@ -18,3 +18,18 @@ export const auth = getAuth(app);
 
 /* Make auth available in browser console for testing */
 window.auth = auth;
+
+/* Helper functions for console debugging */
+window.getCurrentUser = () => auth.currentUser;
+window.getUserInfo = () => {
+  const user = auth.currentUser;
+  if (user) {
+    return {
+      email: user.email,
+      uid: user.uid,
+      emailVerified: user.emailVerified,
+      displayName: user.displayName
+    };
+  }
+  return null;
+};
