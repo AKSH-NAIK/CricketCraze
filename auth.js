@@ -11,7 +11,8 @@ import {
   onAuthStateChanged,
   signOut,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  updateProfile
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 /* ================== Theme Management ================== */
@@ -62,7 +63,7 @@ function showMainForUser(user) {
   const nameEl = document.getElementById("account-name");
 
   if (user && acc && nameEl) {
-    nameEl.textContent = user.email || "Player";
+    nameEl.textContent = user.displayName || user.email || "Player";
     acc.classList.remove("hidden");
   }
 }
@@ -135,7 +136,11 @@ async function onLoginSubmit(e) {
   }
 
   try {
-    await signInWithEmailAndPassword(auth, email, password);
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const name = document.getElementById("login-name").value.trim();
+    if (name && !userCredential.user.displayName) {
+      await updateProfile(userCredential.user, { displayName: name });
+    }
   } catch (err) {
     alert(err.message);
   }
@@ -165,7 +170,13 @@ async function onSignupSubmit(e) {
   }
 
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const name = document.getElementById("signup-name").value.trim();
+    if (name) {
+      await updateProfile(userCredential.user, { displayName: name });
+      // Reload user to ensure UI reflects the name immediately or manually trigger UI update
+      showMainForUser(userCredential.user);
+    }
   } catch (err) {
     alert(err.message);
   }
