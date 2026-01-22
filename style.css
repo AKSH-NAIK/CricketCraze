@@ -561,6 +561,17 @@ body {
   outline: 2px solid rgba(74,124,89,0.25);
 }
 
+.pw-toggle svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  color: #374151; /* matches input text color */
+}
+
+body.dark-mode .pw-toggle svg {
+  color: #e2e8f0;
+}
+
 .primary-btn {
   padding: 12px 16px;
   border: none;

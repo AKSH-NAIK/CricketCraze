@@ -192,20 +192,47 @@ async function logout() {
 window.logout = logout;
 
 /* ================== Password Visibility Toggles ================== */
+const EYE_SVG = `
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="currentColor"/>
+  </svg>
+`;
+
+const EYE_SLASH_SVG = `
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M1 12s4-7 11-7c2.13 0 4.11.5 5.86 1.36" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22.5 12.5S18.5 19 11.5 19c-2.08 0-4.01-.47-5.74-1.33" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 3l18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+`;
+
 function togglePasswordVisibility(targetInputId, btn) {
   const input = document.getElementById(targetInputId);
   if (!input) return;
-  const isPassword = input.type === 'password';
-  input.type = isPassword ? 'text' : 'password';
-  // update button icon
-  btn.textContent = isPassword ? '🙈' : '👁️';
-  btn.setAttribute('aria-pressed', String(isPassword));
+  const wasPassword = input.type === 'password';
+  input.type = wasPassword ? 'text' : 'password';
+  // show eye-slash when visible (text), show eye when hidden (password)
+  btn.innerHTML = wasPassword ? EYE_SLASH_SVG : EYE_SVG;
+  btn.setAttribute('aria-pressed', String(wasPassword));
+  btn.setAttribute('aria-label', wasPassword ? 'Hide password' : 'Show password');
 }
 
 function initPasswordToggles() {
   document.querySelectorAll('.pw-toggle').forEach((btn) => {
     const target = btn.dataset.target;
     if (!target) return;
+    // initialize icon based on input type
+    const input = document.getElementById(target);
+    if (input && input.type === 'password') {
+      btn.innerHTML = EYE_SVG;
+      btn.setAttribute('aria-label', 'Show password');
+      btn.setAttribute('aria-pressed', 'false');
+    } else {
+      btn.innerHTML = EYE_SLASH_SVG;
+      btn.setAttribute('aria-label', 'Hide password');
+      btn.setAttribute('aria-pressed', 'true');
+    }
     btn.addEventListener('click', () => togglePasswordVisibility(target, btn));
   });
 }
