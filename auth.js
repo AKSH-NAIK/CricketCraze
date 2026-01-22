@@ -191,6 +191,25 @@ async function logout() {
 // Make logout globally accessible for onclick handler
 window.logout = logout;
 
+/* ================== Password Visibility Toggles ================== */
+function togglePasswordVisibility(targetInputId, btn) {
+  const input = document.getElementById(targetInputId);
+  if (!input) return;
+  const isPassword = input.type === 'password';
+  input.type = isPassword ? 'text' : 'password';
+  // update button icon
+  btn.textContent = isPassword ? '🙈' : '👁️';
+  btn.setAttribute('aria-pressed', String(isPassword));
+}
+
+function initPasswordToggles() {
+  document.querySelectorAll('.pw-toggle').forEach((btn) => {
+    const target = btn.dataset.target;
+    if (!target) return;
+    btn.addEventListener('click', () => togglePasswordVisibility(target, btn));
+  });
+}
+
 /* ================== Init ================== */
 function initAuth() {
   initTheme();
@@ -202,6 +221,9 @@ function initAuth() {
   document
     .getElementById("signup-form")
     ?.addEventListener("submit", onSignupSubmit);
+
+  // Initialize password visibility toggle buttons
+  initPasswordToggles();
 
   onAuthStateChanged(auth, (user) => {
     if (user) {

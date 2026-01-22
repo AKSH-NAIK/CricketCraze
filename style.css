@@ -531,6 +531,36 @@ body {
   font-size: 1rem;
 }
 
+/* Input group for inputs with inline controls (like password visibility) */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  width: 100%;
+  padding-right: 44px; /* space for the toggle button */
+}
+
+.pw-toggle {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  padding: 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pw-toggle:focus {
+  outline: 2px solid rgba(74,124,89,0.25);
+}
+
 .primary-btn {
   padding: 12px 16px;
   border: none;
