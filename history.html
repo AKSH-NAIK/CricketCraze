@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Quiz History - CricketCraze</title>
+  <link rel="icon" type="image/svg+xml" href="cricket-logo.svg">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Theme Toggle - Top Right -->
+  <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()">
+    <span class="toggle-icon">🌙</span><span class="toggle-text">Dark</span>
+  </button>
+
+  <div class="cricket-field">
+    <div class="container">
+      <div class="screen">
+        <div class="header">
+          <div class="logo">
+            <h1>CricketCraze</h1>
+          </div>
+          <p class="subtitle">Your Quiz History</p>
+        </div>
+
+        <div class="history-container">
+          <button onclick="goHome()" class="action-btn home">
+            <span class="btn-icon">←</span>
+            <span class="btn-text">Back to Home</span>
+          </button>
+
+          <div class="history-table-wrapper">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Difficulty</th>
+                  <th>Score</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="history-body">
+                <!-- Filled by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPORTANT: use type=module because firebase.js uses ES modules -->
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="./history.js"></script>
+</body>
+</html>

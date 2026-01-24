@@ -39,7 +39,7 @@
             </div>
             <button type="submit" class="primary-btn">Login</button>
             <div class="divider">or</div>
-            <button type="button" class="google-btn" onclick="signInWithGoogle()">
+            <button type="button" class="google-btn" id="google-login-btn-login">
               <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
               Continue with Google
             </button>
@@ -58,7 +58,7 @@
             </div>
             <button type="submit" class="primary-btn">Create account</button>
             <div class="divider">or</div>
-            <button type="button" class="google-btn" onclick="signInWithGoogle()">
+            <button type="button" class="google-btn" id="google-login-btn-signup">
               <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
               Continue with Google
             </button>
@@ -73,12 +73,20 @@
       <!-- Start Screen -->
       <div id="start-screen" class="screen hidden">
         <div class="site-header">
-          <div class="logo">
-            <h1>CricketCraze</h1>
+          <div class="header-left">
+            <div class="logo">
+              <h1>CricketCraze</h1>
+            </div>
+            <div id="account-name-wrapper" class="account-name-wrapper hidden">
+              <span id="account-name"></span>
+            </div>
           </div>
           <div id="account-area" class="account-area hidden">
-            <span id="account-name"></span>
             <button id="logout-btn" class="action-btn home" onclick="logout()">Logout</button>
+            <button class="action-btn history" onclick="goToHistory()">
+              <span class="btn-icon">📜</span>
+              <span class="btn-text">History</span>
+            </button>
           </div>
         </div>
         <div class="header">
@@ -158,6 +166,10 @@
             <button class="action-btn home" onclick="goToHome()">
               <span class="btn-icon">🏠</span>
               <span class="btn-text">Home</span>
+            </button>
+            <button class="action-btn history" onclick="goToHistory()">
+              <span class="btn-icon">📜</span>
+              <span class="btn-text">History</span>
             </button>
           </div>
         </div>

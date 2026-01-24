@@ -79,7 +79,6 @@ async function loadQuestionSets() {
     const response = await fetch('questions.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`Failed to load questions.json (${response.status})`);
     const data = await response.json();
-    // Basic shape validation
     if (typeof data !== 'object' || !data) throw new Error('Invalid questions format');
     ['easy', 'medium', 'hard'].forEach(key => {
       if (!Array.isArray(data[key])) throw new Error(`Missing or invalid '${key}' questions`);
@@ -109,7 +108,7 @@ async function startQuiz(difficulty) {
       goToHome();
       return;
     }
-    // Shuffle and select up to 10
+
     const allQuestions = [...pool];
     currentQuestions = shuffle(allQuestions).slice(0, Math.min(10, allQuestions.length));
     currentQuestionIndex = 0;
@@ -117,7 +116,6 @@ async function startQuiz(difficulty) {
 
     showQuestion();
   } catch (_) {
-    // loadQuestionSets already alerted; just ensure home state
     goToHome();
   }
 }
@@ -162,7 +160,6 @@ function selectOption(selected, btnClicked) {
   const optionsDiv = document.getElementById('options');
   const buttons = optionsDiv.querySelectorAll('button');
 
-
   buttons.forEach(btn => btn.disabled = true);
 
   buttons.forEach(btn => {
@@ -170,6 +167,7 @@ function selectOption(selected, btnClicked) {
       btn.classList.add('correct');
     }
   });
+
   if (selected !== questionObj.answer) {
     btnClicked.classList.add('incorrect');
     playSound('incorrect');
@@ -200,6 +198,7 @@ function showCorrectAndNext() {
       btn.classList.add('correct');
     }
   });
+
   setTimeout(() => {
     playSound('click');
     currentQuestionIndex++;
@@ -211,6 +210,43 @@ function showCorrectAndNext() {
   }, 3000);
 }
 
+/* ===============================
+   🔹 SEND PROGRESS TO BACKEND
+   =============================== */
+
+async function sendProgressToBackend(level, score) {
+  const user = auth.currentUser;
+
+  if (!user) {
+    console.log("User not logged in, cannot save progress");
+    return;
+  }
+
+  try {
+    const token = await user.getIdToken();
+
+    console.log("Sending progress to backend:", { level, score });
+
+    const res = await fetch("http://localhost:5000/api/progress", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        level: level,   // "easy" | "medium" | "hard"
+        score: score
+      })
+    });
+
+    const data = await res.json();
+    console.log("Backend save response:", data);
+
+  } catch (err) {
+    console.error("Failed to send progress:", err);
+  }
+}
+
 function showResult(score, total) {
   // Hide quiz box and show result box
   document.getElementById('quiz-box').classList.add('hidden');
@@ -220,11 +256,14 @@ function showResult(score, total) {
   // Update the score display
   document.getElementById('final-score').textContent = `${score} / ${total}`;
   playSound('result');
+
+  // 🔹 NEW: Send progress automatically to backend
+  console.log("Quiz finished. Difficulty:", activeDifficulty, "Score:", score);
+  sendProgressToBackend(activeDifficulty, score);
 }
 
-// Add this function to restart the quiz with the same difficulty
+// Restart quiz with same difficulty
 function startQuizAgain() {
-  // Hide result box and show quiz box
   document.getElementById('result-box').classList.add('hidden');
   document.getElementById('quiz-box').classList.remove('hidden');
   currentQuestionIndex = 0;
@@ -236,24 +275,21 @@ function startQuizAgain() {
 function goToHome() {
   document.getElementById('result-box').classList.add('hidden');
   document.getElementById('start-screen').classList.remove('hidden');
-  // Reset quiz state
   currentQuestionIndex = 0;
   score = 0;
   clearInterval(timerInterval);
 }
 
 function quitQuiz() {
-  // Hide quiz and result boxes
   document.getElementById('quiz-box').classList.add('hidden');
   document.getElementById('result-box').classList.add('hidden');
-  // Show home screen
   document.getElementById('start-screen').classList.remove('hidden');
-  // Reset quiz state
   currentQuestionIndex = 0;
   score = 0;
   clearInterval(timerInterval);
   playSound('click');
 }
+
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -262,7 +298,7 @@ function shuffle(array) {
   return array;
 }
 
-// Make functions globally accessible for onclick handlers
+// Make functions globally accessible
 window.startQuiz = startQuiz;
 window.toggleSound = toggleSound;
 window.goToHome = goToHome;
@@ -288,4 +324,8 @@ window.getFirebaseIdToken = async () => {
   const token = await auth.currentUser.getIdToken();
   console.log("FIREBASE ID TOKEN:");
   console.log(token);
+};
+
+window.goToHistory = () => {
+  window.location.href = "history.html";
 };

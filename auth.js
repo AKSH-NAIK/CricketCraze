@@ -18,6 +18,7 @@ import {
 /* ================== Theme Management ================== */
 let isDarkMode = false;
 
+
 function initTheme() {
   const savedTheme = localStorage.getItem("cc_theme");
   if (savedTheme) {
@@ -61,10 +62,17 @@ function showMainForUser(user) {
 
   const acc = document.getElementById("account-area");
   const nameEl = document.getElementById("account-name");
+  const nameWrapper = document.getElementById("account-name-wrapper");
 
   if (user && acc && nameEl) {
-    nameEl.textContent = user.displayName || user.email || "Player";
+    // Use displayName from user object (set from form), or "Player" as fallback
+    // Never extract from email - name must come from form input
+    const displayName = user.displayName || "Player";
+    nameEl.textContent = displayName;
     acc.classList.remove("hidden");
+    if (nameWrapper) {
+      nameWrapper.classList.remove("hidden");
+    }
   }
 }
 
@@ -72,6 +80,7 @@ function showAuthScreen() {
   document.getElementById("start-screen")?.classList.add("hidden");
   document.getElementById("auth-screen")?.classList.remove("hidden");
   document.getElementById("account-area")?.classList.add("hidden");
+  document.getElementById("account-name-wrapper")?.classList.add("hidden");
 }
 
 /* ================== Helpers ================== */
@@ -138,9 +147,33 @@ async function onLoginSubmit(e) {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const name = document.getElementById("login-name").value.trim();
-    if (name && !userCredential.user.displayName) {
+    
+    // Always show account area when logged in
+    const nameEl = document.getElementById("account-name");
+    const nameWrapper = document.getElementById("account-name-wrapper");
+    const acc = document.getElementById("account-area");
+    
+    if (name) {
+      // Update profile with name from form
       await updateProfile(userCredential.user, { displayName: name });
+      // Update UI immediately with the name from form
+      if (nameEl) {
+        nameEl.textContent = name;
+      }
+    } else if (userCredential.user.displayName) {
+      // Use existing displayName if no new name provided
+      if (nameEl) {
+        nameEl.textContent = userCredential.user.displayName;
+      }
+    } else {
+      // Fallback to "Player" if no name exists
+      if (nameEl) {
+        nameEl.textContent = "Player";
+      }
     }
+    
+    if (nameWrapper) nameWrapper.classList.remove("hidden");
+    if (acc) acc.classList.remove("hidden");
   } catch (err) {
     alert(err.message);
   }
@@ -172,11 +205,27 @@ async function onSignupSubmit(e) {
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const name = document.getElementById("signup-name").value.trim();
+    
+    // Always show account area after signup
+    const nameEl = document.getElementById("account-name");
+    const nameWrapper = document.getElementById("account-name-wrapper");
+    const acc = document.getElementById("account-area");
+    
+    // Always use name from form for signup
+    const nameToUse = name || "Player";
+    
     if (name) {
+      // Update profile with name from form
       await updateProfile(userCredential.user, { displayName: name });
-      // Reload user to ensure UI reflects the name immediately or manually trigger UI update
-      showMainForUser(userCredential.user);
     }
+    
+    // Update UI immediately with the name from form
+    if (nameEl) {
+      nameEl.textContent = nameToUse;
+    }
+    
+    if (nameWrapper) nameWrapper.classList.remove("hidden");
+    if (acc) acc.classList.remove("hidden");
   } catch (err) {
     alert(err.message);
   }
@@ -261,4 +310,37 @@ function initAuth() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", initAuth);
+document.addEventListener("DOMContentLoaded", () => {
+  initAuth();
+  
+  // Initialize Google sign-in buttons
+  const googleProvider = new GoogleAuthProvider();
+  
+  // Handle Google button in login form
+  const googleBtnLogin = document.getElementById("google-login-btn-login");
+  if (googleBtnLogin) {
+    googleBtnLogin.addEventListener("click", async () => {
+      try {
+        await signInWithPopup(auth, googleProvider);
+        // onAuthStateChanged will handle the rest
+      } catch (error) {
+        console.error("Google login error:", error);
+        alert(error.message);
+      }
+    });
+  }
+  
+  // Handle Google button in signup form
+  const googleBtnSignup = document.getElementById("google-login-btn-signup");
+  if (googleBtnSignup) {
+    googleBtnSignup.addEventListener("click", async () => {
+      try {
+        await signInWithPopup(auth, googleProvider);
+        // onAuthStateChanged will handle the rest
+      } catch (error) {
+        console.error("Google login error:", error);
+        alert(error.message);
+      }
+    });
+  }
+});
