@@ -12,7 +12,7 @@ async function fetchUserHistory() {
   try {
     const token = await user.getIdToken();
 
-    const res = await fetch("http://localhost:5000/api/progress", {
+    const res = await fetch("https://cricketcraze-backend-1.onrender.com/api/progress", {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`

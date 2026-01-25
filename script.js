@@ -227,7 +227,7 @@ async function sendProgressToBackend(level, score) {
 
     console.log("Sending progress to backend:", { level, score });
 
-    const res = await fetch("http://localhost:5000/api/progress", {
+    const res = await fetch("https://cricketcraze-backend-1.onrender.com/api/progress", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,
