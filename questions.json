@@ -140,6 +140,47 @@
       ],
       "answer": "Royal Challengers Bengaluru"
     }
+    ,
+    {
+      "question": "What is the duration of one IPL innings?",
+      "options": [
+        "20 overs",
+        "10 overs",
+        "50 overs",
+        "25 overs"
+      ],
+      "answer": "20 overs"
+    },
+    {
+      "question": "Who is nicknamed 'Captain Cool'?",
+      "options": [
+        "MS Dhoni",
+        "Virat Kohli",
+        "Ricky Ponting",
+        "Sachin Tendulkar"
+      ],
+      "answer": "MS Dhoni"
+    },
+    {
+      "question": "Which of these is a fielding position?",
+      "options": [
+        "Silly Mid On",
+        "Goalkeeper",
+        "Quarterback",
+        "Pitcher"
+      ],
+      "answer": "Silly Mid On"
+    },
+    {
+      "question": "Which city is home to Wankhede Stadium?",
+      "options": [
+        "Mumbai",
+        "Chennai",
+        "Bengaluru",
+        "Kolkata"
+      ],
+      "answer": "Mumbai"
+    }
   ],
   "medium": [
     {
@@ -251,6 +292,47 @@
         "AB de Villiers"
       ],
       "answer": "Brendon McCullum"
+    }
+    ,
+    {
+      "question": "Which player has the most IPL centuries?",
+      "options": [
+        "Chris Gayle",
+        "Virat Kohli",
+        "AB de Villiers",
+        "Shikhar Dhawan"
+      ],
+      "answer": "Chris Gayle"
+    },
+    {
+      "question": "Who won the Purple Cap in IPL 2019?",
+      "options": [
+        "Imran Tahir",
+        "Jasprit Bumrah",
+        "Dhawal Kulkarni",
+        "Rashid Khan"
+      ],
+      "answer": "Imran Tahir"
+    },
+    {
+      "question": "What is a 'Duck' in cricket?",
+      "options": [
+        "Scored zero runs",
+        "Dismissed by lbw",
+        "Hit a six",
+        "Took a wicket"
+      ],
+      "answer": "Scored zero runs"
+    },
+    {
+      "question": "How many players are there on the fielding side?",
+      "options": [
+        "11",
+        "10",
+        "12",
+        "9"
+      ],
+      "answer": "11"
     }
   ],
   "hard": [
@@ -393,6 +475,47 @@
         "Lasith Malinga"
       ],
       "answer": "Bhuvneshwar Kumar"
+    }
+    ,
+    {
+      "question": "What is the Duckworth-Lewis method used for?",
+      "options": [
+        "Revising target in rain-affected matches",
+        "Determining player of the match",
+        "Measuring bat speed",
+        "Calculating run-rate"
+      ],
+      "answer": "Revising target in rain-affected matches"
+    },
+    {
+      "question": "What does a 'Mankad' dismissal refer to?",
+      "options": [
+        "Run out of the non-striker before delivery",
+        "Bowled",
+        "Stumped",
+        "Hit wicket"
+      ],
+      "answer": "Run out of the non-striker before delivery"
+    },
+    {
+      "question": "Which delivery is called a 'googly'?",
+      "options": [
+        "A leg-spinner's delivery that turns the opposite way",
+        "A fast bouncer",
+        "A full toss",
+        "A yorker"
+      ],
+      "answer": "A leg-spinner's delivery that turns the opposite way"
+    },
+    {
+      "question": "What is a 'Powerplay' in T20 cricket?",
+      "options": [
+        "A period with fielding restrictions",
+        "An extra innings",
+        "A tie-breaker",
+        "The opening ceremony"
+      ],
+      "answer": "A period with fielding restrictions"
     }
   ]
 }

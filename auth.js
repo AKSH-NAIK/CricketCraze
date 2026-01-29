@@ -12,7 +12,8 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
-  updateProfile
+  updateProfile,
+  sendEmailVerification
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 /* ================== Theme Management ================== */
@@ -88,6 +89,17 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+const DISPOSABLE_DOMAINS = [
+  "mailinator.com", "yopmail.com", "tempmail.com", "guerrillamail.com",
+  "10minutemail.com", "sharklasers.com", "dispostable.com", "getnada.com",
+  "maildrop.cc", "trashmail.com", "easy-mail.net", "fakeinbox.com"
+];
+
+function isDisposableEmail(email) {
+  const domain = email.split("@")[1]?.toLowerCase();
+  return DISPOSABLE_DOMAINS.includes(domain);
+}
+
 /* ================== Auth Tab Switching ================== */
 function switchAuthTab(tab) {
   const loginTab = document.getElementById("tab-login");
@@ -147,12 +159,12 @@ async function onLoginSubmit(e) {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const name = document.getElementById("login-name").value.trim();
-    
+
     // Always show account area when logged in
     const nameEl = document.getElementById("account-name");
     const nameWrapper = document.getElementById("account-name-wrapper");
     const acc = document.getElementById("account-area");
-    
+
     if (name) {
       // Update profile with name from form
       await updateProfile(userCredential.user, { displayName: name });
@@ -171,7 +183,7 @@ async function onLoginSubmit(e) {
         nameEl.textContent = "Player";
       }
     }
-    
+
     if (nameWrapper) nameWrapper.classList.remove("hidden");
     if (acc) acc.classList.remove("hidden");
   } catch (err) {
@@ -202,34 +214,62 @@ async function onSignupSubmit(e) {
     return;
   }
 
+  if (isDisposableEmail(email)) {
+    alert("Please use a permanent email address. Disposable emails are not allowed.");
+    return;
+  }
+
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+    // Send verification email
+    await sendEmailVerification(userCredential.user);
+    alert("A verification email has been sent to " + email + ". Please verify before playing.");
+
     const name = document.getElementById("signup-name").value.trim();
-    
-    // Always show account area after signup
-    const nameEl = document.getElementById("account-name");
-    const nameWrapper = document.getElementById("account-name-wrapper");
-    const acc = document.getElementById("account-area");
-    
+
     // Always use name from form for signup
     const nameToUse = name || "Player";
-    
+
     if (name) {
       // Update profile with name from form
       await updateProfile(userCredential.user, { displayName: name });
     }
-    
-    // Update UI immediately with the name from form
-    if (nameEl) {
-      nameEl.textContent = nameToUse;
-    }
-    
-    if (nameWrapper) nameWrapper.classList.remove("hidden");
-    if (acc) acc.classList.remove("hidden");
+
+    // UI will be handled by onAuthStateChanged
   } catch (err) {
     alert(err.message);
   }
 }
+
+/* ================== Email Verification Helpers ================== */
+async function checkEmailVerification() {
+  const user = auth.currentUser;
+  if (!user) return;
+
+  await user.reload();
+  if (user.emailVerified) {
+    showMainForUser(user);
+    alert("Email verified! Welcome to CricketCraze.");
+  } else {
+    alert("Email is not verified yet. Please check your inbox.");
+  }
+}
+
+async function resendVerificationEmail() {
+  const user = auth.currentUser;
+  if (!user) return;
+
+  try {
+    await sendEmailVerification(user);
+    alert("Verification email resent!");
+  } catch (err) {
+    alert(err.message);
+  }
+}
+
+window.checkEmailVerification = checkEmailVerification;
+window.resendVerificationEmail = resendVerificationEmail;
 
 /* ================== Logout ================== */
 async function logout() {
@@ -303,8 +343,22 @@ function initAuth() {
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      showMainForUser(user);
+      if (user.emailVerified) {
+        document.getElementById("verify-screen")?.classList.add("hidden");
+        showMainForUser(user);
+      } else {
+        // Show verification screen
+        document.getElementById("auth-screen")?.classList.add("hidden");
+        document.getElementById("start-screen")?.classList.add("hidden");
+        const verifyScreen = document.getElementById("verify-screen");
+        if (verifyScreen) {
+          verifyScreen.classList.remove("hidden");
+          const emailDisp = document.getElementById("verify-email-display");
+          if (emailDisp) emailDisp.textContent = user.email;
+        }
+      }
     } else {
+      document.getElementById("verify-screen")?.classList.add("hidden");
       showAuthScreen();
     }
   });
@@ -312,10 +366,10 @@ function initAuth() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initAuth();
-  
+
   // Initialize Google sign-in buttons
   const googleProvider = new GoogleAuthProvider();
-  
+
   // Handle Google button in login form
   const googleBtnLogin = document.getElementById("google-login-btn-login");
   if (googleBtnLogin) {
@@ -329,7 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  
+
   // Handle Google button in signup form
   const googleBtnSignup = document.getElementById("google-login-btn-signup");
   if (googleBtnSignup) {
