@@ -59,6 +59,7 @@ function updateThemeButton() {
 /* ================== UI State ================== */
 function showMainForUser(user) {
   document.getElementById("auth-screen")?.classList.add("hidden");
+  document.getElementById("verify-screen")?.classList.add("hidden");
   document.getElementById("start-screen")?.classList.remove("hidden");
 
   const acc = document.getElementById("account-area");
@@ -79,6 +80,7 @@ function showMainForUser(user) {
 
 function showAuthScreen() {
   document.getElementById("start-screen")?.classList.add("hidden");
+  document.getElementById("verify-screen")?.classList.add("hidden");
   document.getElementById("auth-screen")?.classList.remove("hidden");
   document.getElementById("account-area")?.classList.add("hidden");
   document.getElementById("account-name-wrapper")?.classList.add("hidden");
