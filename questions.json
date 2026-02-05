@@ -11,14 +11,14 @@
       "answer": "Indian Premier League"
     },
     {
-      "question": "Which team won IPL 2025?",
+      "question": "Which team won IPL 2024?",
       "options": [
-        "MI",
-        "CSK",
-        "RCB",
-        "RR"
+        "KKR",
+        "SRH",
+        "RR",
+        "RCB"
       ],
-      "answer": "RCB"
+      "answer": "KKR"
     },
     {
       "question": "Who is the highest wicket-taker in IPL history?",
@@ -41,27 +41,27 @@
       "answer": "Virat Kohli"
     },
     {
-      "question": "What is the maximum number of overs in an IPL match?",
+      "question": "What is the maximum number of overs in one IPL innings?",
       "options": [
         "20",
         "25",
         "30",
         "40"
       ],
-      "answer": "40"
+      "answer": "20"
     },
     {
-      "question": "Which team has won the most IPL titles?",
+      "question": "Which team has won 5 IPL titles?",
       "options": [
         "MI",
         "SRH",
         "KKR",
-        "RCB"
+        "GT"
       ],
       "answer": "MI"
     },
     {
-      "question": "What's the maximum number of foreign players allowed in an IPL team?",
+      "question": "What is the maximum number of foreign players allowed in an IPL playing XI?",
       "options": [
         "Unlimited",
         "3",
@@ -101,17 +101,17 @@
       "answer": "Chris Gayle"
     },
     {
-      "question": "What is the official color of the Kolkata Knight Riders?",
+      "question": "What is the primary color of the Kolkata Knight Riders jersey?",
       "options": [
-        "Purple and Gold",
-        "Blue and Yellow",
-        "Red and Black",
-        "Green and White"
+        "Purple",
+        "Blue",
+        "Red",
+        "Green"
       ],
-      "answer": "Purple and Gold"
+      "answer": "Purple"
     },
     {
-      "question": " Which Team has scored the most run in one inning ?",
+      "question": "Which Team has scored the highest total (287) in an IPL inning?",
       "options": [
         "RCB",
         "CSK",
@@ -131,48 +131,27 @@
       "answer": "Orange Cap"
     },
     {
-      "question": "Which team has scored the lowest total in IPL history?",
+      "question": "Which team has scored the lowest total (49) in IPL history?",
       "options": [
-        "Sunrisers Hyderabad",
-        "Kolkata Knight Riders",
-        "Royal Challengers Bengaluru",
-        "Gujrat Titans"
+        "SRH",
+        "KKR",
+        "RCB",
+        "GT"
       ],
-      "answer": "Royal Challengers Bengaluru"
-    }
-    ,
-    {
-      "question": "What is the duration of one IPL innings?",
-      "options": [
-        "20 overs",
-        "10 overs",
-        "50 overs",
-        "25 overs"
-      ],
-      "answer": "20 overs"
+      "answer": "RCB"
     },
     {
-      "question": "Who is nicknamed 'Captain Cool'?",
+      "question": "Who is nicknamed 'Captain Cool' in the IPL?",
       "options": [
         "MS Dhoni",
         "Virat Kohli",
-        "Ricky Ponting",
-        "Sachin Tendulkar"
+        "Rohit Sharma",
+        "Hardik Pandya"
       ],
       "answer": "MS Dhoni"
     },
     {
-      "question": "Which of these is a fielding position?",
-      "options": [
-        "Silly Mid On",
-        "Goalkeeper",
-        "Quarterback",
-        "Pitcher"
-      ],
-      "answer": "Silly Mid On"
-    },
-    {
-      "question": "Which city is home to Wankhede Stadium?",
+      "question": "Which city is home to the Wankhede Stadium?",
       "options": [
         "Mumbai",
         "Chennai",
@@ -180,6 +159,196 @@
         "Kolkata"
       ],
       "answer": "Mumbai"
+    },
+    {
+      "question": "Which player is the captain of Chennai Super Kings (CSK) in 2024?",
+      "options": [
+        "MS Dhoni",
+        "Ruturaj Gaikwad",
+        "Ravindra Jadeja",
+        "Suresh Raina"
+      ],
+      "answer": "Ruturaj Gaikwad"
+    },
+    {
+      "question": "How many teams participated in the first IPL in 2008?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "6"
+      ],
+      "answer": "8"
+    },
+    {
+      "question": "Who was the first captain to win 3 IPL titles?",
+      "options": [
+        "MS Dhoni",
+        "Rohit Sharma",
+        "Gautam Gambhir",
+        "Hardik Pandya"
+      ],
+      "answer": "MS Dhoni"
+    },
+    {
+      "question": "Which stadium is the home ground of RCB?",
+      "options": [
+        "Wankhede",
+        "M. Chinnaswamy",
+        "Eden Gardens",
+        "Arjun Jaitley"
+      ],
+      "answer": "M. Chinnaswamy"
+    },
+    {
+      "question": "Which color cap is given to the leading wicket-taker?",
+      "options": [
+        "Purple",
+        "Orange",
+        "Blue",
+        "Gold"
+      ],
+      "answer": "Purple"
+    },
+    {
+      "question": "Who is the 'Hitman' of IPL?",
+      "options": [
+        "Virat Kohli",
+        "Rohit Sharma",
+        "Shikhir Dhawan",
+        "Suryakumar Yadav"
+      ],
+      "answer": "Rohit Sharma"
+    },
+    {
+      "question": "Which team replaced Delhi Daredevils in the IPL?",
+      "options": [
+        "Delhi Capitals",
+        "Lucknow Super Giants",
+        "Gujarat Titans",
+        "Punjab Kings"
+      ],
+      "answer": "Delhi Capitals"
+    },
+    {
+      "question": "Who hit the longest six (125m) in IPL 2008?",
+      "options": [
+        "Chris Gayle",
+        "MS Dhoni",
+        "Albie Morkel",
+        "Yuvraj Singh"
+      ],
+      "answer": "Albie Morkel"
+    },
+    {
+      "question": "Which team won IPL 2023?",
+      "options": [
+        "GT",
+        "CSK",
+        "MI",
+        "LSG"
+      ],
+      "answer": "CSK"
+    },
+    {
+      "question": "Which team is nicknamed 'Thala' for its iconic captain?",
+      "options": [
+        "MI",
+        "RCB",
+        "CSK",
+        "KKR"
+      ],
+      "answer": "CSK"
+    },
+    {
+      "question": "What is the duration of a Strategic Timeout in IPL?",
+      "options": [
+        "2 minutes",
+        "2.5 minutes",
+        "3 minutes",
+        "5 minutes"
+      ],
+      "answer": "2.5 minutes"
+    },
+    {
+      "question": "Which player has played the most IPL matches?",
+      "options": [
+        "Virat Kohli",
+        "Rohit Sharma",
+        "MS Dhoni",
+        "Ravindra Jadeja"
+      ],
+      "answer": "MS Dhoni"
+    },
+    {
+      "question": "Who was the captain of MI when they won their first title in 2013?",
+      "options": [
+        "Ricky Ponting",
+        "Sachin Tendulkar",
+        "Rohit Sharma",
+        "Harbhajan Singh"
+      ],
+      "answer": "Rohit Sharma"
+    },
+    {
+      "question": "Which team has the logo of a roaring lion?",
+      "options": [
+        "Punjab Kings",
+        "CSK",
+        "GT",
+        "RR"
+      ],
+      "answer": "CSK"
+    },
+    {
+      "question": "Who is the mentor of KKR in IPL 2024?",
+      "options": [
+        "Sourav Ganguly",
+        "Gautam Gambhir",
+        "Rahul Dravid",
+        "Ricky Ponting"
+      ],
+      "answer": "Gautam Gambhir"
+    },
+    {
+      "question": "Which player is known as 'Mr. IPL'?",
+      "options": [
+        "Virat Kohli",
+        "MS Dhoni",
+        "Suresh Raina",
+        "Chris Gayle"
+      ],
+      "answer": "Suresh Raina"
+    },
+    {
+      "question": "Which team did Hardik Pandya lead to a title in 2022?",
+      "options": [
+        "MI",
+        "GT",
+        "LSG",
+        "RR"
+      ],
+      "answer": "GT"
+    },
+    {
+      "question": "Who won the first-ever IPL Orange Cap in 2008?",
+      "options": [
+        "Shaun Marsh",
+        "Gautam Gambhir",
+        "Sanath Jayasuriya",
+        "Brendon McCullum"
+      ],
+      "answer": "Shaun Marsh"
+    },
+    {
+      "question": "Which team plays at Eden Gardens?",
+      "options": [
+        "KKR",
+        "SRH",
+        "RR",
+        "DC"
+      ],
+      "answer": "KKR"
     }
   ],
   "medium": [
@@ -224,27 +393,7 @@
       "answer": "Harshal Patel"
     },
     {
-      "question": "Who was the captain of the Chennai Super Kings in IPL 2020?",
-      "options": [
-        "MS Dhoni",
-        "Ravindra Jadeja",
-        "Faf du Plessis",
-        "Dwayne Bravo"
-      ],
-      "answer": "MS Dhoni"
-    },
-    {
-      "question": " WHich team playes their home matches at wankhede stadium?",
-      "options": [
-        "MI",
-        "CSK",
-        "RCB",
-        "KKR"
-      ],
-      "answer": "MI"
-    },
-    {
-      "question": "Who has scored the first century in IPL History?",
+      "question": "Who scored the first-ever century in IPL history?",
       "options": [
         "Virat Kohli",
         "David Warner",
@@ -254,268 +403,656 @@
       "answer": "Brendon McCullum"
     },
     {
-      "question": "Which bowler finished as the leading wicket-taker in the 2020 IPL season?",
+      "question": "Which team did David Warner lead to their only IPL title in 2016?",
       "options": [
-        "Kagiso Rabada",
-        "Jasprit Bumrah",
-        "Yuzvendra Chahal",
-        "Bhuvneshwar Kumar"
+        "SRH",
+        "DC",
+        "KXIP",
+        "RR"
       ],
-      "answer": "Kagiso Rabada"
+      "answer": "SRH"
     },
     {
-      "question": "Which team has recorded the highest successful run chase in IPL history?",
+      "question": "Who was the first Indian to score a century in IPL?",
       "options": [
-        "Mumbai indians",
-        "Sunrisers Hyderabad",
-        "Gujrat Titans",
-        "Punjab Kings"
+        "Manish Pandey",
+        "Virat Kohli",
+        "Suresh Raina",
+        "Rohit Sharma"
+      ],
+      "answer": "Manish Pandey"
+    },
+    {
+      "question": "Which bowler has the most 4+ wicket hauls in IPL history?",
+      "options": [
+        "Lasith Malinga",
+        "Amit Mishra",
+        "Sunil Narine",
+        "Yuzvendra Chahal"
+      ],
+      "answer": "Sunil Narine"
+    },
+    {
+      "question": "Which team recorded the highest successful run chase in IPL history (262)?",
+      "options": [
+        "MI",
+        "SRH",
+        "Punjab Kings",
+        "RR"
       ],
       "answer": "Punjab Kings"
     },
     {
-      "question": "How many games does each team play during the IPL league stage?",
+      "question": "Who was the captain of Deccan Chargers when they won in 2009?",
       "options": [
-        "12",
-        "14",
-        "16",
-        "10"
+        "Adam Gilchrist",
+        "VVS Laxman",
+        "Rohit Sharma",
+        "Kumar Sangakkara"
       ],
-      "answer": "14"
+      "answer": "Adam Gilchrist"
     },
     {
-      "question": "Who was the first player to score a century in IPL history?",
-      "options": [
-        "Brendon McCullum",
-        "Chris Gayle",
-        "Virat Kohli",
-        "AB de Villiers"
-      ],
-      "answer": "Brendon McCullum"
-    }
-    ,
-    {
-      "question": "Which player has the most IPL centuries?",
+      "question": "Which player has the record for the most IPL centuries (8)?",
       "options": [
         "Chris Gayle",
         "Virat Kohli",
-        "AB de Villiers",
-        "Shikhar Dhawan"
+        "Jos Buttler",
+        "Shubman Gill"
       ],
-      "answer": "Chris Gayle"
+      "answer": "Virat Kohli"
     },
     {
       "question": "Who won the Purple Cap in IPL 2019?",
       "options": [
         "Imran Tahir",
         "Jasprit Bumrah",
-        "Dhawal Kulkarni",
+        "Kagiso Rabada",
         "Rashid Khan"
       ],
       "answer": "Imran Tahir"
     },
     {
-      "question": "What is a 'Duck' in cricket?",
+      "question": "How many teams have won the IPL title at least once (as of 2024)?",
       "options": [
-        "Scored zero runs",
-        "Dismissed by lbw",
-        "Hit a six",
-        "Took a wicket"
+        "5",
+        "6",
+        "7",
+        "8"
       ],
-      "answer": "Scored zero runs"
+      "answer": "7"
     },
     {
-      "question": "How many players are there on the fielding side?",
+      "question": "Who scored the fastest century (30 balls) in IPL history?",
       "options": [
-        "11",
-        "10",
-        "12",
-        "9"
-      ],
-      "answer": "11"
-    }
-  ],
-  "hard": [
-    {
-      "question": "Who was the first uncapped player to win an IPL MVP?",
-      "options": [
-        "Axar Patel",
-        "Varun Chakravarthy",
-        "Paul Valthaty",
-        "Harshal Patel"
-      ],
-      "answer": "Paul Valthaty"
-    },
-    {
-      "question": "Which player has the highest strike rate in a single IPL season?",
-      "options": [
+        "Yusuf Pathan",
         "Chris Gayle",
         "AB de Villiers",
-        "Andre Russell",
-        "MS Dhoni"
+        "David Miller"
       ],
       "answer": "Chris Gayle"
     },
     {
-      "question": "Who is the only player to have taken a hat-trick in the IPL final?",
+      "question": "Which bowler has taken three hat-tricks in the IPL?",
       "options": [
-        "Ravichandran Ashwin",
-        "Jaydev Unadkat",
-        "Kagiso Rabada",
-        "Brett Lee"
+        "Amit Mishra",
+        "Yuzvendra Chahal",
+        "Rashid Khan",
+        "Lasith Malinga"
       ],
-      "answer": "Jaydev Unadkat"
+      "answer": "Amit Mishra"
     },
     {
-      "question": "Which team has the highest win percentage in IPL history?",
+      "question": "What title did Gujarat Titans win in their debut season?",
       "options": [
+        "IPL 2021",
+        "IPL 2022",
+        "IPL 2023",
+        "IPL 2020"
+      ],
+      "answer": "IPL 2022"
+    },
+    {
+      "question": "Who was the expensive player in the 2024 auction (24.75 Cr)?",
+      "options": [
+        "Pat Cummins",
+        "Mitchell Starc",
+        "Sam Curran",
+        "Cameron Green"
+      ],
+      "answer": "Mitchell Starc"
+    },
+    {
+      "question": "Which team does KL Rahul captain in IPL 2024?",
+      "options": [
+        "PBKS",
+        "LSG",
+        "SRH",
+        "DC"
+      ],
+      "answer": "LSG"
+    },
+    {
+      "question": "Who won the Most Valuable Player (MVP) award in IPL 2023?",
+      "options": [
+        "Shubman Gill",
+        "Yashasvi Jaiswal",
+        "Rashid Khan",
+        "Mohammad Shami"
+      ],
+      "answer": "Shubman Gill"
+    },
+    {
+      "question": "Which city hosted the IPL 2024 final?",
+      "options": [
+        "Mumbai",
+        "Ahmedabad",
+        "Chennai",
+        "Kolkata"
+      ],
+      "answer": "Chennai"
+    },
+    {
+      "question": "Who was the first player to reach 5000 IPL runs?",
+      "options": [
+        "Virat Kohli",
+        "Suresh Raina",
+        "Rohit Sharma",
+        "David Warner"
+      ],
+      "answer": "Suresh Raina"
+    },
+    {
+      "question": "Which team was banned for 2 years (2016-2017) along with CSK?",
+      "options": [
+        "RR",
         "MI",
-        "CSK",
         "RCB",
         "KKR"
       ],
-      "answer": "MI"
+      "answer": "RR"
     },
     {
-      "question": "Who was the first player to score 1000 runs in IPL?",
+      "question": "Who holds the record for most dismissals by a wicketkeeper in IPL?",
       "options": [
-        "Brendon McCullum",
-        "Chris Gayle",
-        "Rohit Sharma",
-        "David Warner"
+        "Dinesh Karthik",
+        "MS Dhoni",
+        "Wriddhiman Saha",
+        "Robin Uthappa"
       ],
-      "answer": "Brendon McCullum"
+      "answer": "MS Dhoni"
     },
     {
-      "question": "Which player took the first-ever IPL hat-trick?",
+      "question": "Which player hit 5 sixes in the last over to win for KKR against GT in 2023?",
       "options": [
-        "Yuvraj Singh",
-        "Shane Bond",
-        "Brett Lee",
-        "Lakshmipathy Balaji"
+        "Nitish Rana",
+        "Andre Russell",
+        "Rinku Singh",
+        "Venkatesh Iyer"
       ],
-      "answer": "Lakshmipathy Balaji"
+      "answer": "Rinku Singh"
     },
     {
-      "question": "Who holds the record of best bowling figure in IPL History?",
+      "question": "Who was the captain of KKR when they won their first title in 2012?",
       "options": [
-        "Harbhajan Singh",
-        "Lasith Malinga",
-        "Alzarri Joseph",
-        "Yuzvendra Chahal"
+        "Sourav Ganguly",
+        "Gautam Gambhir",
+        "Dinesh Karthik",
+        "Eoin Morgan"
       ],
-      "answer": "Alzarri Joseph"
+      "answer": "Gautam Gambhir"
     },
     {
-      "question": "Who has won MVP in consecutice seasons?",
+      "question": "Which spin bowler has the most wickets for RCB in IPL?",
+      "options": [
+        "Yuzvendra Chahal",
+        "Anil Kumble",
+        "Wanindu Hasaranga",
+        "Karn Sharma"
+      ],
+      "answer": "Yuzvendra Chahal"
+    },
+    {
+      "question": "Who won the Emerging Player of the Year in IPL 2024?",
+      "options": [
+        "Yashasvi Jaiswal",
+        "Nitish Kumar Reddy",
+        "Mayank Yadav",
+        "Riyan Parag"
+      ],
+      "answer": "Nitish Kumar Reddy"
+    },
+    {
+      "question": "Which team has the highest winning percentage in IPL history?",
+      "options": [
+        "MI",
+        "CSK",
+        "KKR",
+        "GT"
+      ],
+      "answer": "CSK"
+    },
+    {
+      "question": "Who was the first batsman to cross 6000 IPL runs?",
       "options": [
         "Virat Kohli",
-        "Rohit Sharma",
-        "None",
-        "David Warner"
+        "Shikhar Dhawan",
+        "David Warner",
+        "Suresh Raina"
       ],
-      "answer": "None"
+      "answer": "Virat Kohli"
     },
     {
-      "question": "Who has won the most MVP awards in IPL history?",
+      "question": "Which player is known for the 'Narine Grip'?",
       "options": [
-        "Virat Kohli",
-        "Rohit Sharma",
         "Sunil Narine",
-        "David Warner"
+        "Rashid Khan",
+        "Varun Chakravarthy",
+        "Ravi Bishnoi"
       ],
       "answer": "Sunil Narine"
     },
     {
-      "question": "Which team holds the record for longest winning streak in IPL history?",
+      "question": "Which team did Chris Gayle score his 175* against?",
       "options": [
-        "Kolkata Knight Riders",
-        "Mumbai Indians",
-        "Chennai Super Kings",
-        "Royal Challengers Banglore"
+        "PWI",
+        "KXIP",
+        "RR",
+        "DC"
       ],
-      "answer": "Kolkata Knight Riders"
+      "answer": "PWI"
     },
     {
-      "question": "Who was the Captain of the Deccan Chargers when they won IPL 2009?",
+      "question": "Who has the best bowling figures (6/12) for an Indian in IPL?",
       "options": [
-        "Rohit Sharma",
-        "Kumar Sangkara",
-        "Adam Gilchrist",
-        "Andrew Symonds"
+        "Anil Kumble",
+        "Alzarri Joseph",
+        "Mohit Sharma",
+        "Deepak Chahar"
       ],
-      "answer": "Adam Gilchrist"
+      "answer": "Anil Kumble"
+    },
+    {
+      "question": "Which player was the first to captain an IPL team in 100 matches?",
+      "options": [
+        "MS Dhoni",
+        "Gautam Gambhir",
+        "Virat Kohli",
+        "Rohit Sharma"
+      ],
+      "answer": "MS Dhoni"
+    },
+    {
+      "question": "Who was the first overseas player to score 5000 IPL runs?",
+      "options": [
+        "Chris Gayle",
+        "AB de Villiers",
+        "David Warner",
+        "Jos Buttler"
+      ],
+      "answer": "David Warner"
+    },
+    {
+      "question": "Which team won the Champions League T20 in 2011 and 2013?",
+      "options": [
+        "CSK",
+        "MI",
+        "RCB",
+        "KKR"
+      ],
+      "answer": "MI"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Who was the first uncapped player to win the IPL MVP (then Player of the Tournament)?",
+      "options": [
+        "Paul Valthaty",
+        "Harshal Patel",
+        "Shane Watson",
+        "Sunil Narine"
+      ],
+      "answer": "Shane Watson"
+    },
+    {
+      "question": "Which player has the highest strike rate (min 1000 runs) in IPL history?",
+      "options": [
+        "Andre Russell",
+        "Suryakumar Yadav",
+        "Glenn Maxwell",
+        "Heinrich Klaasen"
+      ],
+      "answer": "Andre Russell"
+    },
+    {
+      "question": "Who is the only player to take a hat-trick in an IPL final?",
+      "options": [
+        "Lakshmipathy Balaji",
+        "Jaydev Unadkat",
+        "No one",
+        "Amit Mishra"
+      ],
+      "answer": "No one"
+    },
+    {
+      "question": "Who holds the record for the best bowling figures (6/12) in IPL history?",
+      "options": [
+        "Alzarri Joseph",
+        "Sohail Tanvir",
+        "Adam Zampa",
+        "Anil Kumble"
+      ],
+      "answer": "Alzarri Joseph"
+    },
+    {
+      "question": "Who was the first player to score 1000 runs for a single franchise?",
+      "options": [
+        "Suresh Raina",
+        "Virat Kohli",
+        "Sachin Tendulkar",
+        "MS Dhoni"
+      ],
+      "answer": "Suresh Raina"
+    },
+    {
+      "question": "Which bowler took the first-ever IPL hat-trick in 2008?",
+      "options": [
+        "Lakshmipathy Balaji",
+        "Amit Mishra",
+        "Makhaya Ntini",
+        "Yuvraj Singh"
+      ],
+      "answer": "Lakshmipathy Balaji"
+    },
+    {
+      "question": "Who has won the IPL MVP award the most times (3)?",
+      "options": [
+        "Sunil Narine",
+        "Andre Russell",
+        "Shane Watson",
+        "Virat Kohli"
+      ],
+      "answer": "Sunil Narine"
+    },
+    {
+      "question": "Which team holds the record for the longest winning streak (10) in IPL history?",
+      "options": [
+        "KKR",
+        "MI",
+        "CSK",
+        "RCB"
+      ],
+      "answer": "KKR"
     },
     {
       "question": "Who was the first player to score a century in an IPL final?",
       "options": [
         "Shane Watson",
         "Wriddhiman Saha",
-        "Ben Stokes",
-        "Virat Kohli"
+        "Manish Pandey",
+        "Murali Vijay"
       ],
       "answer": "Wriddhiman Saha"
-    },
-    {
-      "question": "Who has claimed the most hat-tricks in IPL history?",
-      "options": [
-        "Yuzvendra Chahal",
-        "Amit Mishra",
-        "Lasith Malinga",
-        "Kagiso Rabada"
-      ],
-      "answer": "Amit Mishra"
     },
     {
       "question": "Which bowler has bowled the most dot balls in IPL history?",
       "options": [
         "Bhuvneshwar Kumar",
-        "Jasprit Bumrah",
         "Sunil Narine",
-        "Lasith Malinga"
+        "Ravichandran Ashwin",
+        "Piyush Chawla"
       ],
       "answer": "Bhuvneshwar Kumar"
-    }
-    ,
-    {
-      "question": "What is the Duckworth-Lewis method used for?",
-      "options": [
-        "Revising target in rain-affected matches",
-        "Determining player of the match",
-        "Measuring bat speed",
-        "Calculating run-rate"
-      ],
-      "answer": "Revising target in rain-affected matches"
     },
     {
-      "question": "What does a 'Mankad' dismissal refer to?",
+      "question": "What is the lowest successful target ever defended in IPL history (116)?",
       "options": [
-        "Run out of the non-striker before delivery",
-        "Bowled",
-        "Stumped",
-        "Hit wicket"
+        "CSK vs KXIP",
+        "MI vs PWI",
+        "CSK vs RCB",
+        "SRH vs MI"
       ],
-      "answer": "Run out of the non-striker before delivery"
+      "answer": "CSK vs KXIP"
     },
     {
-      "question": "Which delivery is called a 'googly'?",
+      "question": "Who was the first Indian player to win the Orange Cap?",
       "options": [
-        "A leg-spinner's delivery that turns the opposite way",
-        "A fast bouncer",
-        "A full toss",
-        "A yorker"
+        "Sachin Tendulkar",
+        "Robin Uthappa",
+        "Virat Kohli",
+        "Ruturaj Gaikwad"
       ],
-      "answer": "A leg-spinner's delivery that turns the opposite way"
+      "answer": "Sachin Tendulkar"
     },
     {
-      "question": "What is a 'Powerplay' in T20 cricket?",
+      "question": "Which Overseas player has won the Purple Cap twice?",
       "options": [
-        "A period with fielding restrictions",
-        "An extra innings",
-        "A tie-breaker",
-        "The opening ceremony"
+        "Dwayne Bravo",
+        "Bhuvneshwar Kumar",
+        "Morne Morkel",
+        "Kagiso Rabada"
       ],
-      "answer": "A period with fielding restrictions"
+      "answer": "Dwayne Bravo"
+    },
+    {
+      "question": "Who scored the most runs (973) in a single IPL season (2016)?",
+      "options": [
+        "Virat Kohli",
+        "David Warner",
+        "Jos Buttler",
+        "Chris Gayle"
+      ],
+      "answer": "Virat Kohli"
+    },
+    {
+      "question": "Which player has been part of the most IPL winning teams (6)?",
+      "options": [
+        "Rohit Sharma",
+        "Ambati Rayudu",
+        "MS Dhoni",
+        "Suresh Raina"
+      ],
+      "answer": "Rohit Sharma"
+    },
+    {
+      "question": "Who was the first player to be 'Retired Out' in IPL history?",
+      "options": [
+        "Ravichandran Ashwin",
+        "Shimron Hetmyer",
+        "Kieron Pollard",
+        "Rahul Tewatia"
+      ],
+      "answer": "Ravichandran Ashwin"
+    },
+    {
+      "question": "Which team has played in the most IPL finals (10)?",
+      "options": [
+        "CSK",
+        "MI",
+        "KKR",
+        "RCB"
+      ],
+      "answer": "CSK"
+    },
+    {
+      "question": "Who was the Man of the Match in the 2008 IPL final?",
+      "options": [
+        "Shane Watson",
+        "Yusuf Pathan",
+        "MS Dhoni",
+        "Sohail Tanvir"
+      ],
+      "answer": "Yusuf Pathan"
+    },
+    {
+      "question": "Which player holds the record for the most catches in IPL history (non-keeper)?",
+      "options": [
+        "Suresh Raina",
+        "Virat Kohli",
+        "Ravindra Jadeja",
+        "Kieron Pollard"
+      ],
+      "answer": "Virat Kohli"
+    },
+    {
+      "question": "Who was the first player to score a century for Mumbai Indians?",
+      "options": [
+        "Sanath Jayasuriya",
+        "Sachin Tendulkar",
+        "Rohit Sharma",
+        "Lendl Simmons"
+      ],
+      "answer": "Sanath Jayasuriya"
+    },
+    {
+      "question": "Which player has the most ducks in IPL history?",
+      "options": [
+        "Dinesh Karthik",
+        "Rohit Sharma",
+        "Piyush Chawla",
+        "Glenn Maxwell"
+      ],
+      "answer": "Dinesh Karthik"
+    },
+    {
+      "question": "Who was the first overseas captain to win the IPL?",
+      "options": [
+        "Shane Warne",
+        "Adam Gilchrist",
+        "David Warner",
+        "Kane Williamson"
+      ],
+      "answer": "Shane Warne"
+    },
+    {
+      "question": "Which team has the highest run rate in a single season?",
+      "options": [
+        "SRH (2024)",
+        "KKR (2024)",
+        "RCB (2016)",
+        "MI (2020)"
+      ],
+      "answer": "KKR (2024)"
+    },
+    {
+      "question": "Who was the first player to take 150 IPL wickets?",
+      "options": [
+        "Lasith Malinga",
+        "Amit Mishra",
+        "Piyush Chawla",
+        "Dwayne Bravo"
+      ],
+      "answer": "Lasith Malinga"
+    },
+    {
+      "question": "Which batsman scored 37 runs in a single over (against PWI in 2011)?",
+      "options": [
+        "Chris Gayle",
+        "Virat Kohli",
+        "AB de Villiers",
+        "Ravindra Jadeja"
+      ],
+      "answer": "Chris Gayle"
+    },
+    {
+      "question": "Who was the first player to score 50 half-centuries in IPL?",
+      "options": [
+        "David Warner",
+        "Virat Kohli",
+        "Shikhar Dhawan",
+        "Shubman Gill"
+      ],
+      "answer": "David Warner"
+    },
+    {
+      "question": "Which team did the 'Kochi Tuskers Kerala' play for in which year?",
+      "options": [
+        "2011",
+        "2010",
+        "2012",
+        "2013"
+      ],
+      "answer": "2011"
+    },
+    {
+      "question": "Who was the player of the tournament in IPL 2009?",
+      "options": [
+        "Adam Gilchrist",
+        "Matthew Hayden",
+        "RP Singh",
+        "Rohit Sharma"
+      ],
+      "answer": "Adam Gilchrist"
+    },
+    {
+      "question": "Which bowler has defended the fewest runs (2) in a Super Over?",
+      "options": [
+        "Jasprit Bumrah",
+        "Kagiso Rabada",
+        "Navdeep Saini",
+        "Sunil Narine"
+      ],
+      "answer": "Sunil Narine"
+    },
+    {
+      "question": "Who holds the record for most Maiden overs in IPL history?",
+      "options": [
+        "Praveen Kumar",
+        "Bhuvneshwar Kumar",
+        "Jasprit Bumrah",
+        "Irfan Pathan"
+      ],
+      "answer": "Praveen Kumar"
+    },
+    {
+      "question": "Which player has scored the most runs in IPL playoffs?",
+      "options": [
+        "Suresh Raina",
+        "MS Dhoni",
+        "Rohit Sharma",
+        "Virat Kohli"
+      ],
+      "answer": "Suresh Raina"
+    },
+    {
+      "question": "Who was the first Indian to take 5 wickets in an IPL match?",
+      "options": [
+        "Anil Kumble",
+        "Lakshmipathy Balaji",
+        "Sohail Tanvir",
+        "Amit Mishra"
+      ],
+      "answer": "Lakshmipathy Balaji"
+    },
+    {
+      "question": "Which team has finished at the bottom of the table the most times?",
+      "options": [
+        "PBKS",
+        "DC",
+        "RCB",
+        "SRH"
+      ],
+      "answer": "DC"
+    },
+    {
+      "question": "Who was the captain of Rajasthan Royals in the 2022 final?",
+      "options": [
+        "Sanju Samson",
+        "Steve Smith",
+        "Jos Buttler",
+        "Shane Warne"
+      ],
+      "answer": "Sanju Samson"
+    },
+    {
+      "question": "Which player has the most consecutive fifties (5) in IPL history?",
+      "options": [
+        "Jos Buttler",
+        "Virender Sehwag",
+        "Virat Kohli",
+        "David Warner"
+      ],
+      "answer": "Jos Buttler"
     }
   ]
 }
