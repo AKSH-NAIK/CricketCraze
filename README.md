@@ -1,106 +1,100 @@
-# CricketCraze
+# 🏏 CricketCraze
 
-An interactive cricket trivia quiz application built with vanilla HTML, CSS, and JavaScript.
+An interactive full-stack cricket trivia quiz application. CricketCraze tests your knowledge of cricket facts, records, and history through a sleek, responsive interface with real-time progress tracking.
 
-## Overview
+---
 
-CricketCraze is a browser-based quiz game that tests your knowledge of cricket facts, records, and history. The application features multiple difficulty levels, real-time scoring, timed questions, and a clean responsive interface with dark/light theme support.
+## 🚀 Features
 
-## Live Demo
+- **Multiple Difficulty Levels**: Easy, Medium, and Hard question sets tailored for every fan.
+- **Timed Questions**: Intense 10-second countdown per question to keep you on your toes.
+- **Real-time Scoring**: Instant feedback on correct/incorrect answers with custom audio effects.
+- **Progress Tracking**: Securely save your quiz scores and history to your profile.
+- **Authentication**: Secure login/signup powered by Firebase Authentication.
+- **Theme Toggle**: Stunning Dark and Light mode support with preference persistence.
+- **Responsive Design**: Fluid experience across Mobile, Tablet, and Desktop.
 
-**[Play CricketCraze](https://aksh-naik.github.io/CricketCraze/)**
+---
 
-## Features
+## 🏗️ Project Architecture
 
-- **Multiple Difficulty Levels**: Easy, Medium, and Hard question sets
-- **Timed Questions**: 10-second countdown per question
-- **Real-time Scoring**: Instant feedback on correct/incorrect answers
-- **Audio Feedback**: Web Audio API-powered sound effects
-- **Theme Toggle**: Dark and light mode with preference persistence
-- **Client-side Authentication**: Mock login/signup with session storage
-- **Responsive Design**: Optimized for desktop and mobile devices
-- **No Dependencies**: Pure HTML, CSS, and JavaScript
+CricketCraze follows a modern **Client-Server architecture** with a clear separation of concerns:
 
-## Tech Stack
+- **Frontend**: A vanilla JavaScript SPA (Single Page Application) that handles the game logic, UI rendering, and direct Firebase Auth integration.
+- **Backend**: A Node.js/Express server that acts as a secure data layer, managing user progress and interacting with Firestore.
+- **Database**: Google Cloud Firestore for scalable, real-time data storage.
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Document structure |
-| CSS3 | Styling, animations, dark mode |
-| JavaScript (ES6+) | Game logic, audio, authentication |
-| Web Audio API | Sound effects |
-| Local Storage | Session and theme persistence |
+---
 
-## Project Structure
+## 🛠️ Tech Stack
 
-```
-CricketCraze/
-├── index.html        # Main HTML document
-├── style.css         # Stylesheet with dark mode support
-├── script.js         # Quiz game logic
-├── auth.js           # Authentication and theme module
-├── questions.json    # Question database
-└── README.md
-```
+### Frontend
+- **HTML5 & CSS3**: Semantic structure and premium glassmorphic design.
+- **JavaScript (ES6+)**: Custom game engine and sound synthesis.
+- **Firebase Auth**: Client-side identity management.
+- **Web Audio API**: Dynamic sound effects without external assets.
 
-## Getting Started
+### Backend
+- **Node.js & Express**: High-performance RESTful API.
+- **Firebase Admin SDK**: Secure server-side access to Firestore and Auth verification.
+- **CORS**: Configured for secure cross-origin communication.
 
-### Prerequisites
+---
 
-A modern web browser (Chrome, Firefox, Safari, Edge).
+## 📡 RESTful API (Backend Integration)
 
-### Running Locally
+Yes, CricketCraze uses a **RESTful API** for handling sensitive operations like progress tracking. The backend exposes several endpoints:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/AKSH-NAIK/CricketCraze.git
-   cd CricketCraze
-   ```
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `GET` | `/api/progress` | Fetch current user's quiz history | 🔒 Yes |
+| `POST` | `/api/progress` | Save a new quiz result | 🔒 Yes |
+| `GET` | `/api/test/protected` | Connectivity and security test | 🔒 Yes |
 
-2. Serve the files using any static server:
-   ```bash
-   npx serve
-   ```
+> [!NOTE]  
+> All protected routes require a valid Firebase ID Token passed in the `Authorization: Bearer <token>` header.
 
-3. Open `http://localhost:3000` in your browser.
+---
 
-Alternatively, open `index.html` directly in your browser.
+## 📂 Project Structure
 
-## Configuration
-
-### Adding Questions
-
-Edit `questions.json` to add or modify questions. Each question follows this format:
-
-```json
-{
-  "question": "Your question text",
-  "options": ["Option A", "Option B", "Option C", "Option D"],
-  "answer": "Correct Option"
-}
+### Frontend (`CricketCraze/`)
+```text
+├── index.html        # Main entry point & UI structure
+├── style.css         # Premium styles & Dark mode tokens
+├── script.js         # Core Game Logic & API Integration
+├── auth.js           # Firebase Auth Handlers
+├── firebase.js       # Firebase Configuration
+├── questions.json    # Local question database
+└── history.html      # Progress dashboard
 ```
 
-Questions are organized by difficulty: `easy`, `medium`, `hard`.
+### Backend (`CricketCraze-Backend/`)
+```text
+├── server.js         # Express server entry point
+├── config/           # Firebase Service Account Config
+├── middleware/       # Auth token verification middleware
+└── routes/           # API route definitions
+```
 
-### Google Sign-In
+---
 
-To enable Google authentication, replace `YOUR_GOOGLE_CLIENT_ID` in `index.html` with your Google OAuth 2.0 client ID.
+## ⚙️ Getting Started
 
-## Contributing
+### 1. Frontend Setup
+1. Clone the repo: `git clone https://github.com/AKSH-NAIK/CricketCraze.git`
+2. Open `index.html` in your browser or serve via `npx serve`.
 
-Contributions are welcome. Please follow these steps:
+### 2. Backend Setup (Optional for local development)
+1. Repository: [CricketCraze-Backend](https://github.com/AKSH-NAIK/CricketCraze-Backend)
+2. Follow the instructions in the backend README to set up `serviceAccountKey.json`.
+3. Run `npm start` to host the API on `http://localhost:5000`.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add your feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
+---
 
-## License
+## 📄 License
+This project is licensed under the MIT License.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Author
-
+## 👤 Author
 **Aksh Naik**  
-GitHub: [github.com/AKSH-NAIK](https://github.com/AKSH-NAIK)
+GitHub: [@AKSH-NAIK](https://github.com/AKSH-NAIK)
