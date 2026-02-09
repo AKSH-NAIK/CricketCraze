@@ -234,11 +234,10 @@ async function onSignupSubmit(e) {
     const nameToUse = name || "Player";
 
     if (name) {
-      // Update profile with name from form
+     
       await updateProfile(userCredential.user, { displayName: name });
     }
 
-    // UI will be handled by onAuthStateChanged
   } catch (err) {
     alert(err.message);
   }
@@ -340,7 +339,7 @@ function initAuth() {
     .getElementById("signup-form")
     ?.addEventListener("submit", onSignupSubmit);
 
-  // Initialize password visibility toggle buttons
+  
   initPasswordToggles();
 
   onAuthStateChanged(auth, (user) => {
@@ -392,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
     googleBtnSignup.addEventListener("click", async () => {
       try {
         await signInWithPopup(auth, googleProvider);
-        // onAuthStateChanged will handle the rest
+       
       } catch (error) {
         console.error("Google login error:", error);
         alert(error.message);
